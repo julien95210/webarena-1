@@ -1,5 +1,6 @@
 <?php 
 //Controller Arenas
+//Actions index, fighter, diary, sight
 
 App::uses('AppController', 'Controller');
 
@@ -18,7 +19,8 @@ class ArenasController extends AppController
 	    //Affichage des informations du fighter
 	    public function fighter()
 	    {
-	        die('page fighter');
+	    	//Stocker dans la variable infos, tous les champs du Model Fighter
+	        $this->set('infos', $this->Fighter->find('all'));
 	    }
 
 	    //Affichage les derniers events du player
