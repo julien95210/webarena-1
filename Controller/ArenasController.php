@@ -17,10 +17,10 @@ class ArenasController extends AppController
 	    }
 
 	    //Affichage des informations du fighter
-	    public function fighter()
+	    public function fighter($id)
 	    {
 	    	//Stocker dans la variable infos, tous les champs du Model Fighter
-	        $this->set('infos', $this->Fighter->find('all'));
+	        $this->set('infos', $this->Fighter->findById($id));
 	    }
 
 	    //Affichage les derniers events du player
