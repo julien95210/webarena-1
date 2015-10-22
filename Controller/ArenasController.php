@@ -30,9 +30,13 @@ class ArenasController extends AppController
 	    }
 
 	    //Affichage des actions possibles du fighter (doMove, doAttack)
-	    public function sight()
+	    public function sight($id)
 	    {
-	        die('page sight');
+	    	//Appel de la méthode doMove du Model Fighter
+	        $this->Fighter->doMove($id, $this->request->data['Fighter']['direction']);
+
+	       	//Stocker dans la variable infos, tous les champs du Model Fighter
+	    	$this->set('infos', $this->Fighter->findById($id));
 	    }
 	}
 ?>
