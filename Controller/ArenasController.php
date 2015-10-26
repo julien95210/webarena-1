@@ -16,6 +16,12 @@ class ArenasController extends AppController
 	        die('page index');
 	    }
 
+	    //Page de login
+	    public function login() 
+	    {
+	    	die('page login');
+	    }
+
 	    //Affichage des informations du fighter
 	    public function fighter($id)
 	    {
